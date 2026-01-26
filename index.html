@@ -1,0 +1,1004 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TAIKUMI — Crafted Intelligence</title>
+  <meta name="description" content="Meesterschap in een tijdperk van artificiële intelligentie. TAIKUMI bouwt technologie met de ziel van een meester.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath d='M65 8 C30 8 8 35 8 55 C8 80 30 92 55 92 C80 92 92 70 92 50 C92 30 75 15 60 12' stroke='%23A04F2B' stroke-width='10' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+  
+  <style>
+    :root {
+      --terra: #A04F2B;
+      --black: #111111;
+      --off-white: #F3EFE8;
+      --ink-grey: #2C2C2C;
+      --soft-sand: #D9CCBA;
+      --copper: #C47C4E;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      scroll-snap-type: y mandatory;
+    }
+    
+    body {
+      font-family: 'Inter', -apple-system, sans-serif;
+      background: var(--off-white);
+      color: var(--ink-grey);
+      line-height: 1.6;
+      font-weight: 300;
+      overflow-x: hidden;
+    }
+    
+    /* Sections */
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      scroll-snap-align: start;
+      position: relative;
+    }
+    
+    /* Hero Section */
+    .hero {
+      flex-direction: column;
+      gap: 3rem;
+      background: var(--off-white);
+    }
+    
+    .enso-container {
+      position: relative;
+      width: 220px;
+      height: 220px;
+    }
+    
+    .logo-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: 0;
+      animation: fadeIn 1.5s ease forwards;
+      animation-delay: 0.3s;
+    }
+    
+    @keyframes drawEnso {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+    @keyframes drawEnso {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+    
+    .wordmark {
+      font-size: 2.5rem;
+      font-weight: 500;
+      letter-spacing: 0.4em;
+      color: var(--black);
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 2s;
+      margin-right: -0.4em; /* Compensate for letter-spacing on last letter */
+      transform: translateX(0.15em); /* Shift right to align K with enso gap */
+    }
+    
+    .tagline {
+      font-size: 1rem;
+      font-style: italic;
+      color: var(--ink-grey);
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 2.5s;
+      letter-spacing: 0.1em;
+    }
+    
+    .whisper {
+      font-size: 0.8rem;
+      color: var(--soft-sand);
+      opacity: 0;
+      animation: fadeIn 1s ease forwards;
+      animation-delay: 3s;
+      letter-spacing: 0.05em;
+      margin-top: 1rem;
+    }
+    
+    .scroll-hint {
+      position: absolute;
+      bottom: 3rem;
+      opacity: 0;
+      animation: fadeIn 1s ease forwards, float 2s ease-in-out infinite;
+      animation-delay: 3s, 3s;
+    }
+    
+    .scroll-hint span {
+      display: block;
+      width: 1px;
+      height: 60px;
+      background: linear-gradient(to bottom, var(--terra), transparent);
+    }
+    
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(10px); }
+    }
+    
+    /* Philosophy Section */
+    .philosophy {
+      background: var(--black);
+      color: var(--off-white);
+    }
+    
+    .philosophy-content {
+      max-width: 700px;
+      text-align: center;
+    }
+    
+    .philosophy h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      color: var(--terra);
+      margin-bottom: 3rem;
+      text-transform: uppercase;
+    }
+    
+    .philosophy blockquote {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 300;
+      line-height: 1.4;
+      margin-bottom: 2rem;
+    }
+    
+    .philosophy blockquote strong {
+      color: var(--terra);
+      font-weight: 400;
+    }
+    
+    .philosophy p {
+      font-size: 1rem;
+      color: var(--soft-sand);
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .philosophy-formula {
+      font-size: 0.9rem;
+      font-weight: 400;
+      letter-spacing: 0.2em;
+      color: var(--terra);
+      margin-top: 5rem;
+    }
+    
+    /* ENSO Platform Section */
+    .platform {
+      background: var(--off-white);
+      flex-direction: column;
+    }
+    
+    .platform-header {
+      text-align: center;
+      max-width: 600px;
+    }
+    
+    .platform-header h2 {
+      font-size: 1.5rem;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      color: var(--terra);
+      margin-bottom: 0.25rem;
+      text-transform: uppercase;
+    }
+    
+    .platform-subtitle {
+      font-size: 0.85rem;
+      color: var(--ink-grey);
+      font-style: italic;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+    }
+    
+    .platform-desc {
+      font-size: clamp(1.2rem, 3vw, 1.8rem);
+      color: var(--ink-grey);
+      max-width: 600px;
+    }
+    
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 3rem;
+      max-width: 900px;
+      width: 100%;
+    }
+    
+    .feature {
+      text-align: center;
+      padding: 2rem;
+    }
+    
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      margin: 0 auto 1.5rem;
+      color: var(--terra);
+    }
+    
+    .feature h3 {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--black);
+      margin-bottom: 0.75rem;
+    }
+    
+    .feature p {
+      font-size: 0.9rem;
+      color: var(--ink-grey);
+    }
+    
+    /* Hito Section */
+    .hito {
+      background: linear-gradient(135deg, var(--ink-grey) 0%, var(--black) 100%);
+      color: var(--off-white);
+    }
+    
+    .hito-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      max-width: 1000px;
+      align-items: center;
+    }
+    
+    .hito-symbol {
+      font-size: 15rem;
+      font-weight: 300;
+      color: var(--terra);
+      text-align: center;
+      line-height: 1;
+      opacity: 0.9;
+    }
+    
+    .hito-text h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      color: var(--terra);
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+    
+    .hito-text h3 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 300;
+      margin-bottom: 1.5rem;
+      color: var(--off-white);
+    }
+    
+    .hito-text p {
+      font-size: 1rem;
+      color: var(--soft-sand);
+      margin-bottom: 1rem;
+    }
+    
+    .hito-text p:last-child {
+      margin-bottom: 0;
+    }
+    
+    /* About Section */
+    .about {
+      background: var(--off-white);
+    }
+    
+    .about-content {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 4rem;
+      max-width: 1000px;
+      align-items: center;
+    }
+    
+    .about-visual {
+      position: relative;
+    }
+    
+    .about-image {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      border-radius: 2px;
+      filter: grayscale(20%);
+    }
+    
+    .about-text h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      color: var(--terra);
+      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+    }
+    
+    .about-text h3 {
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+      font-weight: 400;
+      color: var(--black);
+      margin-bottom: 1.5rem;
+    }
+    
+    .about-text p {
+      font-size: 1rem;
+      color: var(--ink-grey);
+      margin-bottom: 1rem;
+    }
+    
+    .origin-founder {
+      font-style: italic;
+      color: var(--soft-sand);
+      margin-top: 2rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--soft-sand);
+    }
+    
+    /* Contact Section */
+    .contact {
+      background: var(--black);
+      color: var(--off-white);
+      flex-direction: column;
+      gap: 3rem;
+    }
+    
+    .contact-content {
+      text-align: center;
+      max-width: 600px;
+    }
+    
+    .contact h2 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      font-weight: 300;
+      margin-bottom: 1rem;
+    }
+    
+    .contact p {
+      color: var(--soft-sand);
+      margin-bottom: 2rem;
+    }
+    
+    .contact-links {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--off-white);
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 0.75rem 1.5rem;
+      border: 1px solid var(--ink-grey);
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-link:hover {
+      border-color: var(--terra);
+      color: var(--terra);
+    }
+    
+    .contact-link svg {
+      width: 18px;
+      height: 18px;
+    }
+    
+    .contact-footer {
+      position: absolute;
+      bottom: 2rem;
+      color: var(--ink-grey);
+      font-size: 0.75rem;
+    }
+    
+    /* Footer */
+    footer {
+      padding: 2rem;
+      background: var(--black);
+      border-top: 1px solid var(--ink-grey);
+      text-align: center;
+    }
+    
+    .footer-content {
+      max-width: 1000px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--off-white);
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      font-size: 0.9rem;
+    }
+    
+    .footer-logo svg {
+      width: 24px;
+      height: 24px;
+    }
+    
+    .footer-text {
+      color: var(--ink-grey);
+      font-size: 0.75rem;
+    }
+    
+    .footer-legal {
+      color: var(--ink-grey);
+      font-size: 0.75rem;
+    }
+    
+    .footer-link {
+      background: none;
+      border: none;
+      color: var(--ink-grey);
+      font-size: 0.75rem;
+      cursor: pointer;
+      padding: 0;
+      font-family: inherit;
+      transition: color 0.3s ease;
+    }
+    
+    .footer-link:hover {
+      color: var(--terra);
+    }
+    
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(17, 17, 17, 0.9);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+    
+    .modal.active {
+      display: flex;
+    }
+    
+    .modal-content {
+      background: var(--off-white);
+      max-width: 500px;
+      width: 100%;
+      padding: 3rem;
+      border-radius: 2px;
+      position: relative;
+      max-height: 80vh;
+      overflow-y: auto;
+    }
+    
+    .modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: var(--ink-grey);
+      cursor: pointer;
+      line-height: 1;
+      transition: color 0.3s ease;
+    }
+    
+    .modal-close:hover {
+      color: var(--terra);
+    }
+    
+    .modal-content h2 {
+      font-size: 1rem;
+      font-weight: 400;
+      letter-spacing: 0.3em;
+      color: var(--terra);
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+    }
+    
+    .modal-content p {
+      font-size: 0.95rem;
+      color: var(--ink-grey);
+      margin-bottom: 1rem;
+      line-height: 1.7;
+    }
+    
+    .modal-content ul {
+      margin: 0 0 1rem 1.5rem;
+      color: var(--ink-grey);
+      font-size: 0.95rem;
+    }
+    
+    .modal-content li {
+      margin-bottom: 0.5rem;
+    }
+    
+    .modal-content a {
+      color: var(--terra);
+      text-decoration: none;
+    }
+    
+    .modal-content a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Navigation dots */
+    .nav-dots {
+      position: fixed;
+      right: 2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      z-index: 100;
+    }
+    
+    .nav-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--soft-sand);
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      padding: 0;
+    }
+    
+    .nav-dot:hover,
+    .nav-dot.active {
+      background: var(--terra);
+      transform: scale(1.3);
+    }
+    
+    /* Responsive */
+    @media (max-width: 768px) {
+      section {
+        padding: 3rem 1.5rem;
+        min-height: 100svh; /* Better mobile viewport handling */
+      }
+      
+      .hero {
+        gap: 2rem;
+      }
+      
+      .enso-container {
+        width: 160px;
+        height: 160px;
+      }
+      
+      .wordmark {
+        font-size: 1.8rem;
+        letter-spacing: 0.3em;
+      }
+      
+      .tagline {
+        font-size: 0.9rem;
+      }
+      
+      .whisper {
+        font-size: 0.75rem;
+        padding: 0 1rem;
+        text-align: center;
+      }
+      
+      .scroll-hint {
+        bottom: 2rem;
+      }
+      
+      .scroll-hint span {
+        height: 40px;
+      }
+      
+      .philosophy h2 {
+        margin-bottom: 2rem;
+      }
+      
+      .philosophy blockquote {
+        font-size: 1.3rem;
+        line-height: 1.5;
+      }
+      
+      .philosophy p {
+        font-size: 0.9rem;
+      }
+      
+      .platform {
+        gap: 2.5rem;
+      }
+      
+      .platform-header h2 {
+        font-size: 1.2rem;
+      }
+      
+      .platform-desc {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+      }
+      
+      .features {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+      
+      .feature {
+        padding: 1.5rem 1rem;
+      }
+      
+      .feature-icon {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 1rem;
+      }
+      
+      .hito-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+      }
+      
+      .hito-symbol {
+        font-size: 7rem;
+      }
+      
+      .hito-text h3 {
+        font-size: 1.3rem;
+      }
+      
+      .hito-text p {
+        font-size: 0.9rem;
+      }
+      
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+      
+      .about-visual {
+        order: -1;
+        max-width: 200px;
+        margin: 0 auto;
+      }
+      
+      .about-text {
+        text-align: center;
+      }
+      
+      .about-text h3 {
+        font-size: 1.2rem;
+      }
+      
+      .about-text p {
+        font-size: 0.9rem;
+      }
+      
+      .contact h2 {
+        font-size: 1.4rem;
+      }
+      
+      .contact p {
+        font-size: 0.9rem;
+      }
+      
+      .contact-links {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        padding: 0 1rem;
+      }
+      
+      .contact-link {
+        justify-content: center;
+        width: 100%;
+      }
+      
+      .nav-dots {
+        display: none;
+      }
+      
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+    
+    /* Extra small screens */
+    @media (max-width: 380px) {
+      .wordmark {
+        font-size: 1.5rem;
+        letter-spacing: 0.2em;
+      }
+      
+      .enso-container {
+        width: 140px;
+        height: 140px;
+      }
+      
+      .hito-symbol {
+        font-size: 5rem;
+      }
+    }
+    
+    /* Scroll animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Dots -->
+  <nav class="nav-dots" aria-label="Section navigation">
+    <button class="nav-dot active" data-section="hero" aria-label="Home"></button>
+    <button class="nav-dot" data-section="philosophy" aria-label="Philosophy"></button>
+    <button class="nav-dot" data-section="platform" aria-label="ENSO Platform"></button>
+    <button class="nav-dot" data-section="hito" aria-label="Hito"></button>
+    <button class="nav-dot" data-section="about" aria-label="About"></button>
+    <button class="nav-dot" data-section="contact" aria-label="Contact"></button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="enso-container">
+      <img src="enso.png" alt="TAIKUMI Enso" class="logo-image" />
+    </div>
+    <h1 class="wordmark">TAIKUMI</h1>
+    <p class="tagline">Crafted Intelligence</p>
+    <div class="scroll-hint">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- Philosophy -->
+  <section class="philosophy" id="philosophy">
+    <div class="philosophy-content fade-up">
+      <h2>Filosofie</h2>
+      <blockquote>
+        TAIKUMI onderzoekt <strong>meesterschap</strong> in een tijdperk van artificiële intelligentie.
+      </blockquote>
+      <p>
+        Geen technologiebedrijf met een ambachtelijk sausje.<br>
+        Een ambachtelijk denkkader, versterkt door AI.
+      </p>
+      <br>
+      <p class="philosophy-formula">Ambacht × AI × Tijd</p>
+    </div>
+  </section>
+
+  <!-- Platform -->
+  <section class="platform" id="platform">
+    <div class="platform-header fade-up">
+      <h2>ENSŌ</h2>
+      <p class="platform-subtitle">a TAIKUMI platform</p>
+      <p class="platform-desc">
+        Waar technologie, data en mensen samenwerken.<br>
+        De cirkel is open. Nooit af. Altijd evoluerend.
+      </p>
+    </div>
+  </section>
+
+  <!-- Hito -->
+  <section class="hito" id="hito">
+    <div class="hito-content">
+      <div class="hito-symbol fade-up">人</div>
+      <div class="hito-text fade-up">
+        <h2>Digitale Assistent</h2>
+        <h3>Hito betekent mens.</h3>
+        <p>
+          Niet als persona of avatar, maar als aanwezige intelligentie.
+        </p>
+        <p>
+          Observerend vóór handelend.<br>
+          Ondersteunend zonder te domineren.<br>
+          Structureel zonder kil te worden.
+        </p>
+        <p>
+          Die neemt nooit over. Die versterkt.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Origin -->
+  <section class="about" id="about">
+    <div class="about-content">
+      <div class="about-visual fade-up">
+        <img src="founding-image.jpg" alt="Vakmanschap" class="about-image" />
+      </div>
+      <div class="about-text fade-up">
+        <h2>Founding Principle</h2>
+        <p>
+          TAIKUMI ontstond niet in een boardroom.<br>
+          Het groeide uit jarenlange praktijkervaring met hout en mensen, waar tijd en aandacht het verschil maken.
+        </p>
+        <p>
+          Eén vraag dreef de ontwikkeling: hoe kan technologie ruimte maken 
+          voor vakmanschap, in plaats van het te vervangen?
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <div class="contact-content fade-up">
+      <h2>Laten we praten.</h2>
+      <p>
+        Over ambacht.<br>
+        Over AI.<br>
+        Over tijd.
+      </p>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/dannyritzen" class="contact-link" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+          LinkedIn
+        </a>
+        <a href="/cdn-cgi/l/email-protection#bdf9dcd3d3c493efd4c9c7d8d3fdc9dcd4d6c8d0d493dfd8" class="contact-link">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+          </svg>
+          Email
+        </a>
+      </div>
+    </div>
+    <div class="contact-footer">
+      © 2026 TAIKUMI · <button class="footer-link" onclick="openModal('legal')">Legal</button> · <button class="footer-link" onclick="openModal('privacy')">Privacy</button>
+    </div>
+  </section>
+
+  <!-- Legal Modal -->
+  <div id="legal-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('legal')">&times;</button>
+      <h2>Legal</h2>
+      <p>
+        TAIKUMI is een handelsnaam van <strong>CNR Retail</strong>.
+      </p>
+      <p>
+        Maatschappelijke zetel:<br>
+        Hooiland 14<br>
+        B-2160 Wommelgem<br>
+        België
+      </p>
+      <p>
+        Ondernemingsnummer (KBO): <strong>BE 0657.799.263</strong>
+      </p>
+      <p>
+        Contact: <a href="/cdn-cgi/l/email-protection#aeeacfc0c0d780fcc7dad4cbc0eedacfc7c5dbc3c780cccb"><span class="__cf_email__" data-cfemail="4d092c232334631f24393728230d392c2426382024632f28">[email&#160;protected]</span></a>
+      </p>
+    </div>
+  </div>
+
+  <!-- Privacy Modal -->
+  <div id="privacy-modal" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeModal('privacy')">&times;</button>
+      <h2>Privacy</h2>
+      <p>
+        TAIKUMI hecht belang aan je privacy en gaat zorgvuldig om met persoonsgegevens.
+      </p>
+      <p>
+        Wij verzamelen enkel persoonsgegevens die je zelf verstrekt, bijvoorbeeld via e-mail of het contactformulier. Deze gegevens worden uitsluitend gebruikt om op je bericht te reageren.
+      </p>
+      <p><strong>Je gegevens:</strong></p>
+      <ul>
+        <li>worden niet gedeeld met derden</li>
+        <li>worden niet gebruikt voor marketingdoeleinden</li>
+        <li>worden niet langer bewaard dan nodig</li>
+      </ul>
+      <p>
+        Je hebt het recht om je gegevens in te zien, te laten aanpassen of te laten verwijderen. Voor vragen of verzoeken kan je contact opnemen via <a href="/cdn-cgi/l/email-protection#0a4e6b6464732458637e706f644a7e6b63617f676324686f"><span class="__cf_email__" data-cfemail="d195b0bfbfa8ff83b8a5abb4bf91a5b0b8baa4bcb8ffb3b4">[email&#160;protected]</span></a>.
+      </p>
+    </div>
+  </div>
+
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    // Scroll animations
+    const observerOptions = {
+      threshold: 0.2,
+      rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    // Navigation dots
+    const sections = document.querySelectorAll('section');
+    const navDots = document.querySelectorAll('.nav-dot');
+
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navDots.forEach(dot => {
+            dot.classList.remove('active');
+            if (dot.dataset.section === entry.target.id) {
+              dot.classList.add('active');
+            }
+          });
+        }
+      });
+    }, { threshold: 0.5 });
+
+    sections.forEach(section => sectionObserver.observe(section));
+
+    navDots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const section = document.getElementById(dot.dataset.section);
+        section.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    // Modal functions
+    function openModal(type) {
+      document.getElementById(type + '-modal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(type) {
+      document.getElementById(type + '-modal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    // Close modal on outside click
+    document.querySelectorAll('.modal').forEach(modal => {
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+                  closeModal(modal.id.replace('-modal', ''));
+        }
+      });
+    });
+  </script>
+</body>
+</html>
