@@ -1,0 +1,13 @@
+# TAIKUMI
+
+> TAIKUMI — Crafted Intelligence. Trust and semantic protocol layer for agent-to-agent commerce in manufacturing: where security vendors determine whether an agent is real, TAIKUMI determines whether what it asks for can actually be made. Founded by Danny Ritzen, Belgian custom-interiors entrepreneur and builder of ENSŌ (production management) and maaite (AI manufacturing agent).
+
+Taal van de site: Nederlands.
+
+## Over de oprichter
+
+- [Danny Ritzen — profiel](/danny-ritzen.md): wie hij is, zijn bedrijven (MnG, Studio RL, MSI), wat hij bouwt (ENSŌ, maaite, TAIKUMI), zijn ideeën en lezingen
+
+## Site
+
+- [Homepagina](/index.html): TAIKUMI — meesterschap in een tijdperk van artificiële intelligentie
