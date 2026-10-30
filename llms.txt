@@ -6,8 +6,19 @@ Taal van de site: Nederlands.
 
 ## Over de oprichter
 
-- [Danny Ritzen — profiel](/danny-ritzen.md): wie hij is, zijn bedrijven (MnG, Studio RL, MSI), wat hij bouwt (ENSŌ, maaite, TAIKUMI), zijn ideeën en lezingen
+- [Danny Ritzen — profiel](https://www.taikumi.be/danny-ritzen.md): wie hij is, zijn bedrijven (MnG, Studio RL, MSI), wat hij bouwt (ENSŌ, maaite, TAIKUMI), zijn ideeën en lezingen
 
 ## Site
 
-- [Homepagina](/index.html): TAIKUMI — meesterschap in een tijdperk van artificiële intelligentie
+- [Homepagina](https://www.taikumi.be/): TAIKUMI — meesterschap in een tijdperk van artificiële intelligentie
+
+## Bedrijven van de oprichter
+
+- [MnG](https://www.mng-maatwerk.com): B2B-maatwerkinterieur, Wommelgem
+- [Studio RL](https://www.studiorl.be): B2C-schrijnwerk voor particulieren, Kampenhout
+- [MSI — Marc Segers Interieur](https://www.marcsegers.be): B2C-maatwerkinterieur, Relegem
+
+## Contact
+
+- [danny.ritzen@taikumi.be](mailto:danny.ritzen@taikumi.be)
+- [LinkedIn — Danny Ritzen](https://www.linkedin.com/in/dannyritzen/)

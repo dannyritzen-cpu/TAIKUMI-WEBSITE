@@ -10,15 +10,15 @@ Laatst bijgewerkt: oktober 2026
 - **Regio:** provincie Antwerpen, België
 - **Rol:** eigenaar-bedrijfsleider van een groep maatwerkbedrijven in interieur en schrijnwerk
 - **Expertise:** 20+ jaar hands-on ervaring in maatwerkinterieur en productie; AI-agents in de maakindustrie; agent-to-agent-commerce
-- **Talen:** Nederlands, Engels [TE VULLEN: Frans?]
+- **Talen:** Nederlands, Frans, Engels, Duits
 
 ## Bedrijven
 
-| Bedrijf | Wat | Locatie |
-|---|---|---|
-| **MnG** | B2B-maatwerkinterieur; verkooporganisatie van de groep | Wommelgem |
-| **Studio RL** | B2C-schrijnwerk voor particulieren; productie-eenheid, dochter van MnG | Kampenhout |
-| **MSI (Marc Segers Interieur)** | B2C-maatwerkinterieur | Relegem |
+| Bedrijf | Wat | Locatie | Website |
+|---|---|---|---|
+| **MnG** | B2B-maatwerkinterieur; verkooporganisatie van de groep | Wommelgem | [mng-maatwerk.com](https://www.mng-maatwerk.com) |
+| **Studio RL** | B2C-schrijnwerk voor particulieren; productie-eenheid, dochter van MnG | Kampenhout | [studiorl.be](https://www.studiorl.be) |
+| **MSI (Marc Segers Interieur)** | B2C-maatwerkinterieur | Relegem | [marcsegers.be](https://www.marcsegers.be) |
 
 De groep telt ongeveer 10 medewerkers, aangevuld met externen.
 
@@ -43,15 +43,15 @@ Een vertrouwens- en semantische protocollaag voor agent-to-agent-commerce in de 
 
 - **Flanders AI Forum 2026** — spreker, 20 oktober 2026, Nekkerhal Mechelen
 
-[TE VULLEN: andere lezingen, podcasts, artikels]
-
 ## Gespreksonderwerpen
 
 AI in kmo's en de maakindustrie · AI-agents op de werkvloer · productieplanning met echte data · agent-to-agent-commerce · digitalisering van maatwerkinterieur · bouwen met AI zonder klassieke programmeursachtergrond
 
 ## Links en contact
 
-- LinkedIn: [TE VULLEN]
-- MnG: [TE VULLEN]
-- TAIKUMI: [TE VULLEN]
-- Contact voor lezingen of samenwerking: [TE VULLEN]
+- LinkedIn: [linkedin.com/in/dannyritzen](https://www.linkedin.com/in/dannyritzen/)
+- TAIKUMI: [taikumi.be](https://www.taikumi.be)
+- MnG: [mng-maatwerk.com](https://www.mng-maatwerk.com)
+- Studio RL: [studiorl.be](https://www.studiorl.be)
+- MSI (Marc Segers Interieur): [marcsegers.be](https://www.marcsegers.be)
+- Contact voor lezingen of samenwerking: [danny.ritzen@taikumi.be](mailto:danny.ritzen@taikumi.be)
